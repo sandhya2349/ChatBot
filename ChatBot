@@ -1,0 +1,16 @@
+import random
+
+greetings = ["hello", "hi", "hey", "greetings", "howdy"]
+responses = ["Hello!", "Hi there!", "Hey!", "Greetings!", "Hello, how can I assist you?"]
+
+def get_random_response(responses):
+    return random.choice(responses)
+
+while True:
+    user_input = input("User: ").lower()
+
+    if user_input in greetings:
+        bot_response = get_random_response(responses)
+        print("Bot: " + bot_response)
+    else:
+        print("Bot: I'm sorry, I didn't understand that.")
